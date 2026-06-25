@@ -66,7 +66,13 @@
 						class="osteobook-input" autocomplete="tel">
 				</div>
 			</div>
-
+			<div class="osteobook-field input-container">
+				<label for="osteobook-address"><?php esc_html_e( 'Adresse du lieu de RDV *', 'osteo-book' ); ?></label>
+				<textarea id="osteobook-address" name="address" required
+					class="osteobook-input" rows="2"
+					placeholder="<?php esc_attr_e( 'Rue, ville, code postal...', 'osteo-book' ); ?>"
+					autocomplete="street-address"></textarea>
+			</div>
 			<h3 class="osteobook-step__title">
 				<?php esc_html_e( 'Votre animal', 'osteo-book' ); ?>
 			</h3>

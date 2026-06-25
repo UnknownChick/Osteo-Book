@@ -30,6 +30,9 @@ class ReservationValidator {
 		if ( $dto->phone === '' ) {
 			$errors[] = __( 'Le numéro de téléphone est requis.', 'osteo-book' );
 		}
+		if ( $dto->address === '' ) {
+			$errors[] = __( "L'adresse du lieu de rendez-vous est requise.", 'osteo-book' );
+		}
 		if ( $dto->animalName === '' ) {
 			$errors[] = __( "Le nom de l'animal est requis.", 'osteo-book' );
 		}

@@ -49,6 +49,7 @@ class MailService {
 			<table style="border-collapse:collapse;width:100%">
 				<tr><td style="padding:8px;background:#f3f4f6;font-weight:bold">Date</td><td style="padding:8px"><?php echo esc_html( $dto->date ); ?></td></tr>
 				<tr><td style="padding:8px;background:#f3f4f6;font-weight:bold">Créneau</td><td style="padding:8px"><?php echo esc_html( $dto->slot ); ?></td></tr>
+				<tr><td style="padding:8px;background:#f3f4f6;font-weight:bold">Lieu</td><td style="padding:8px"><?php echo nl2br( esc_html( $dto->address ) ); ?></td></tr>
 				<tr><td style="padding:8px;background:#f3f4f6;font-weight:bold">Animal</td><td style="padding:8px"><?php echo esc_html( $dto->animalName . ( $dto->animalType ? ' (' . $dto->animalType . ')' : '' ) ); ?></td></tr>
 			</table>
 			<?php if ( $dto->message ): ?>
@@ -73,6 +74,7 @@ class MailService {
 				<tr><td style="padding:8px;background:#f3f4f6;font-weight:bold">Nom</td><td style="padding:8px"><?php echo esc_html( $dto->lastName ); ?></td></tr>
 				<tr><td style="padding:8px;background:#f3f4f6;font-weight:bold">Email</td><td style="padding:8px"><?php echo esc_html( $dto->email ); ?></td></tr>
 				<tr><td style="padding:8px;background:#f3f4f6;font-weight:bold">Téléphone</td><td style="padding:8px"><?php echo esc_html( $dto->phone ); ?></td></tr>
+				<tr><td style="padding:8px;background:#f3f4f6;font-weight:bold">Adresse</td><td style="padding:8px"><?php echo nl2br( esc_html( $dto->address ) ); ?></td></tr>
 				<tr><td style="padding:8px;background:#f3f4f6;font-weight:bold">Animal</td><td style="padding:8px"><?php echo esc_html( $dto->animalName . ( $dto->animalType ? ' (' . $dto->animalType . ')' : '' ) ); ?></td></tr>
 				<tr><td style="padding:8px;background:#f3f4f6;font-weight:bold">Date</td><td style="padding:8px"><?php echo esc_html( $dto->date ); ?></td></tr>
 				<tr><td style="padding:8px;background:#f3f4f6;font-weight:bold">Créneau</td><td style="padding:8px"><?php echo esc_html( $dto->slot ); ?></td></tr>

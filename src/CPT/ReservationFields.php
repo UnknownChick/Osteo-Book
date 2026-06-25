@@ -61,6 +61,11 @@ class ReservationFields {
 						->required()
 						->column( 50 ),
 
+				Textarea::make( __( 'Adresse du lieu de RDV', 'osteo-book' ), 'osteobook_address' )
+						->helperText( __( 'Adresse où se déroulera la consultation', 'osteo-book' ) )
+						->rows( 2 )
+						->required(),
+
 				// ── Animal ─────────────────────────────────────────────────
 				Tab::make( __( 'Animal', 'osteo-book' ), 'osteobook_tab_animal' ),
 
