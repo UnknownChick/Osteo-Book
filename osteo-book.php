@@ -25,3 +25,9 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 require_once __DIR__ . '/vendor/autoload.php';
+
+define( 'OSTEOBOOK_FILE',    __FILE__ );
+define( 'OSTEOBOOK_PATH',    plugin_dir_path( __FILE__ ) );
+define( 'OSTEOBOOK_URL',     plugin_dir_url( __FILE__ ) );
+define( 'OSTEOBOOK_VERSION', '0.1.0' );
+
