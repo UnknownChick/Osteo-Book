@@ -1,0 +1,8 @@
+{
+  "name": "alexandre/osteo-book",
+  "autoload": {
+    "psr-4": {
+      "OsteoBook\\": "src/"
+    }
+  }
+}
