@@ -1,5 +1,11 @@
 {
   "name": "alexandre/osteo-book",
+  "description": "Animal Osteopathy Appointment Management Plugin for WordPress",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "php": ">=8.4"
+  },
   "autoload": {
     "psr-4": {
       "OsteoBook\\": "src/"
