@@ -1,6 +1,13 @@
 <?php
-
 /**
+ * Animal Osteopathy Appointment Management Plugin for WordPress.
+ * 
+ * @package osteo-book
+ * @linl https://github.com/UnknownChick/Osteo-Book
+ * @author Alexandre Ferreira
+ * @copyright 2026 Alexandre Ferreira
+ * @license GPL v2 or later
+ * 
  * Plugin Name: OsteoBook
  * Plugin URI: https://github.com/UnknownChick/Osteo-Book
  * Description: A plugin to manage animal osteopathy appointments.
