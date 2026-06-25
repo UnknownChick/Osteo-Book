@@ -1,0 +1,72 @@
+/* =====================================================
+   OsteoBook – Admin styles
+   ===================================================== */
+
+/* Calendar */
+.osteobook-admin-wrap #osteobook-calendar {
+    margin-top: 24px;
+    max-width: 1200px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+/* Settings layout */
+.osteobook-settings {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 1200px;
+    margin-top: 24px;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .osteobook-settings { grid-template-columns: 1fr; }
+}
+
+.osteobook-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.osteobook-card h2 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #f3f4f6;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+/* Days table */
+.osteobook-days-table {
+    margin-bottom: 16px;
+}
+
+.osteobook-days-table td,
+.osteobook-days-table th {
+    vertical-align: middle;
+    padding: 8px 12px !important;
+}
+
+/* Helpers */
+.osteobook-empty {
+    color: #6b7280;
+    font-style: italic;
+}
+
+.osteobook-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.osteobook-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
