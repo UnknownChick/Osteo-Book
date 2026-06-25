@@ -32,5 +32,5 @@ define( 'OSTEOBOOK_URL',     plugin_dir_url( __FILE__ ) );
 define( 'OSTEOBOOK_VERSION', '0.1.0' );
 
 add_action( 'plugins_loaded', function () {
-    ( new OsteoBook\Plugin() )->boot();
+	( new OsteoBook\Plugin() )->boot();
 } );
