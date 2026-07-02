@@ -8,6 +8,7 @@ use OsteoBook\Availability\AvailabilityManager;
 use OsteoBook\Container;
 use WP_REST_Request;
 use WP_REST_Response;
+use WP_REST_Server;
 
 class SaveAvailabilityEndpoint {
 
@@ -17,19 +18,19 @@ class SaveAvailabilityEndpoint {
 
 	public function register( string $namespace ): void {
 		register_rest_route( $namespace, '/availability', [
-			'methods' => 'POST',
+			'methods' => WP_REST_Server::CREATABLE,
 			'callback' => [ $this, 'saveWeekly' ],
 			'permission_callback' => fn () => current_user_can( 'manage_options' ),
 		] );
 
 		register_rest_route( $namespace, '/availability/exception', [
 			[
-				'methods' => 'POST',
+				'methods' => WP_REST_Server::CREATABLE,
 				'callback' => [ $this, 'saveException' ],
 				'permission_callback' => fn () => current_user_can( 'manage_options' ),
 			],
 			[
-				'methods' => 'DELETE',
+				'methods' => WP_REST_Server::DELETABLE,
 				'callback' => [ $this, 'deleteException' ],
 				'permission_callback' => fn () => current_user_can( 'manage_options' ),
 			],
