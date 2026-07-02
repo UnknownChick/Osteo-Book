@@ -9,6 +9,7 @@ use OsteoBook\DTO\ReservationDTO;
 use OsteoBook\Reservation\ReservationManager;
 use WP_REST_Request;
 use WP_REST_Response;
+use WP_REST_Server;
 
 class CreateReservationEndpoint {
 
@@ -18,7 +19,7 @@ class CreateReservationEndpoint {
 
 	public function register( string $namespace ): void {
 		register_rest_route( $namespace, '/reservations', [
-			'methods' => 'POST',
+			'methods' => WP_REST_Server::READABLE,
 			'callback' => [ $this, 'handle' ],
 			'permission_callback' => '__return_true',
 		] );
