@@ -42,7 +42,10 @@ class CreateReservationEndpoint {
 
 		if ( ! $result['success'] ) {
 			return new WP_REST_Response(
-				[ 'success' => false, 'errors' => $result['errors'] ],
+				[
+					'success' => false,
+					'errors' => $result['errors']
+				],
 				422
 			);
 		}
