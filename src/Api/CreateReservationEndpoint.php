@@ -19,7 +19,7 @@ class CreateReservationEndpoint {
 
 	public function register( string $namespace ): void {
 		register_rest_route( $namespace, '/reservations', [
-			'methods' => WP_REST_Server::READABLE,
+			'methods' => WP_REST_Server::CREATABLE,
 			'callback' => [ $this, 'handle' ],
 			'permission_callback' => '__return_true',
 		] );
