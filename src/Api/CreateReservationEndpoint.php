@@ -29,10 +29,10 @@ class CreateReservationEndpoint {
 		$params = $request->get_json_params() ?? $request->get_body_params();
 
 		if ( empty( $params ) || ! is_array( $params ) ) {
-			return new WP_REST_Response(
-				[ 'success' => false, 'errors' => [ __( 'Données invalides.', 'osteo-book' ) ] ],
-				400
-			);
+			return new WP_REST_Response( [
+				'success' => false,
+				'errors' => [ __( 'Données invalides.', 'osteo-book' ) ]
+			], 400 );
 		}
 
 		$dto = ReservationDTO::fromArray( $params );
@@ -42,13 +42,10 @@ class CreateReservationEndpoint {
 		$result  = $manager->create( $dto );
 
 		if ( ! $result['success'] ) {
-			return new WP_REST_Response(
-				[
-					'success' => false,
-					'errors' => $result['errors']
-				],
-				422
-			);
+			return new WP_REST_Response( [
+				'success' => false,
+				'errors' => $result['errors']
+			], 422 );
 		}
 
 		return new WP_REST_Response( [
